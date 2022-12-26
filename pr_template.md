@@ -1,4 +1,4 @@
-# Describe Your Changes Below and describe where to begin in the file tree for the code review. Why you make this change?
+# Describe Your Changes Below and describe where to begin in the file tree for the code review. Why did you make this change?
 
 # Pull Request
 - [ ] New feature (adds functionality)
