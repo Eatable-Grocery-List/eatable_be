@@ -1,0 +1,20 @@
+require 'rails_helper'
+
+RSpec.describe RecipeCard do
+  it 'exists' do
+    attrs = {:recipe=>
+      {
+       :label=>"Charles Dickens's Punch Recipe",
+       :image=>
+        "https://edamam-product-images.s3.amazonaws.com/web-img/314/314b171afb6b9acdf5ea21f983d7a1e4.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCFUKHflTfyUR4Rhn5A31Iw9nsR24rvGKuFn5Fi4ps%2FXwIgaljD8awVXJJk98k4FzYG7Zeew%2FrzQ0L2XZLasfrwwQAq1QQIgf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDFHW9ZkQQEekKLZMhCqpBIoyH89Ciihf%2FCIYJduQjrNc70f0p9ZPgdsDvL6R4Qr0cQD6nmFpfu3buPgivsi9SCIxRucqbw8iQTJDtiUx5rjz8EZLD9qQPpLsCArn6qNqOe0DuVGyPKmhk0tUQ%2F3p%2Bjmee0%2BTZUaRQo2tvaYdublbLyKGRIOZiIa94410y%2BY2g8Hsn4dI6EWNC%2B%2FI6TFdV1qQVicGgiy4cBQTk2W4FHp2dB7iXwr%2BN%2FWth2dIU4HTU2%2FOM32f0IA4lGwUrtAtBUi%2Ftb1GhutaI7aZptjFwgSi4v4rYNbArveoLJBLIn5euozwWF7ruexFKMVEPx%2BOmdDGewRh8cae50PHAb%2FS6kwh94oYZzcdGf4aQLwgTi8bDSclnUoENFeOGITWbtE6t9jj2%2FFqJ9eRt8eJXCTT67P1wWSYgoZHy8yjtnDawyQs59QsonAOBGVgPfX8ygtc5P2M8Y4979UzUKkt6v%2B%2BPJBPesGl1jBI4QmRMLm5z2LD23BHhIdC8EMb4a33gVMI6c60eq3pbzWzBH5g8AMjqoF6S2GYWXn705uM7jia%2FK1xF0%2F6ht5%2FwpDVPv4FfQynSRb5bIiFINnhK37Ao4oNihxXeztpRVt14X%2B3KCKwwdljS0GG275Hub8C1sDVnpUrG%2Fzeaoas5e%2F4Thjh85MUDbkGyz9oJrF%2BTUU8qYxi%2BbQt2R8NSLZetI9vB8lcSNy6l6vtxpyEf7GFt9pvyrF5vZLhQ3qqSrkvKmowzai2mwY6qQE5wLDyoUrLyFSnIpsTVer896VFRTWmJDkDomA6SFq2OKwWrKRVhm6L%2BT6QXOt8m0lkbuWQQcbeaPXrwq4dUWMaWopu4QGNdaTsmNRCrZONlbGI2UWWemxTOKiKLtX7TYFebSivOam12Omy%2BWjLOWlNisrYBM11xVBtyBmfMe001%2BXkwd2KgoVn6kHECL26E5PXBsjNA6iFr6rM%2FnSQFTH5YbnfejZTAK7C&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20221111T020112Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFA4OWT7W6%2F20221111%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=6e3b91b615f9dcd63154319f505aba0c99d75478d30cab94976af7504563dbe5"
+      }
+    } 
+
+    recipe = RecipeCard.new(attrs)
+
+    expect(recipe).to be_a RecipeCard
+    expect(recipe.title).to eq("Charles Dickens's Punch Recipe")
+    expect(recipe.image).to eq("https://edamam-product-images.s3.amazonaws.com/web-img/314/314b171afb6b9acdf5ea21f983d7a1e4.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCFUKHflTfyUR4Rhn5A31Iw9nsR24rvGKuFn5Fi4ps%2FXwIgaljD8awVXJJk98k4FzYG7Zeew%2FrzQ0L2XZLasfrwwQAq1QQIgf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDFHW9ZkQQEekKLZMhCqpBIoyH89Ciihf%2FCIYJduQjrNc70f0p9ZPgdsDvL6R4Qr0cQD6nmFpfu3buPgivsi9SCIxRucqbw8iQTJDtiUx5rjz8EZLD9qQPpLsCArn6qNqOe0DuVGyPKmhk0tUQ%2F3p%2Bjmee0%2BTZUaRQo2tvaYdublbLyKGRIOZiIa94410y%2BY2g8Hsn4dI6EWNC%2B%2FI6TFdV1qQVicGgiy4cBQTk2W4FHp2dB7iXwr%2BN%2FWth2dIU4HTU2%2FOM32f0IA4lGwUrtAtBUi%2Ftb1GhutaI7aZptjFwgSi4v4rYNbArveoLJBLIn5euozwWF7ruexFKMVEPx%2BOmdDGewRh8cae50PHAb%2FS6kwh94oYZzcdGf4aQLwgTi8bDSclnUoENFeOGITWbtE6t9jj2%2FFqJ9eRt8eJXCTT67P1wWSYgoZHy8yjtnDawyQs59QsonAOBGVgPfX8ygtc5P2M8Y4979UzUKkt6v%2B%2BPJBPesGl1jBI4QmRMLm5z2LD23BHhIdC8EMb4a33gVMI6c60eq3pbzWzBH5g8AMjqoF6S2GYWXn705uM7jia%2FK1xF0%2F6ht5%2FwpDVPv4FfQynSRb5bIiFINnhK37Ao4oNihxXeztpRVt14X%2B3KCKwwdljS0GG275Hub8C1sDVnpUrG%2Fzeaoas5e%2F4Thjh85MUDbkGyz9oJrF%2BTUU8qYxi%2BbQt2R8NSLZetI9vB8lcSNy6l6vtxpyEf7GFt9pvyrF5vZLhQ3qqSrkvKmowzai2mwY6qQE5wLDyoUrLyFSnIpsTVer896VFRTWmJDkDomA6SFq2OKwWrKRVhm6L%2BT6QXOt8m0lkbuWQQcbeaPXrwq4dUWMaWopu4QGNdaTsmNRCrZONlbGI2UWWemxTOKiKLtX7TYFebSivOam12Omy%2BWjLOWlNisrYBM11xVBtyBmfMe001%2BXkwd2KgoVn6kHECL26E5PXBsjNA6iFr6rM%2FnSQFTH5YbnfejZTAK7C&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20221111T020112Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFA4OWT7W6%2F20221111%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=6e3b91b615f9dcd63154319f505aba0c99d75478d30cab94976af7504563dbe5")
+  end
+end
+
