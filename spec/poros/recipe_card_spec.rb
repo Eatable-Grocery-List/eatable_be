@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe RecipeCard do
-  it 'exists' do
+  it 'exists and has all attributes needed to make a recipe card object' do
     attrs = {:recipe=>
       {
        :label=>"Charles Dickens's Punch Recipe",
