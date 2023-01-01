@@ -10,6 +10,5 @@ RSpec.describe 'recipe ingredients facade' do
     expect(ingredients.ingredients).to be_an(Array)
     expect(ingredients.ingredients).to all(be_a(String))
     expect(ingredients).to be_a(RecipeIngredientObject)
-
   end
 end
