@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  namespace :api do
+    namespace :v1 do
+      resources :recipes, only: [:index], action: :search
+      resources :shopping_list_ingredients, only: [:show], action: :search
+    end
+  end
 end
